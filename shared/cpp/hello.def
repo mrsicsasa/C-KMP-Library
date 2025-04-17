@@ -1,0 +1,4 @@
+headers = hello.h
+headerFilter = hello.h
+compilerOpts = -I /path/to/your/header/files
+linkerOpts = -L /path/to/your/libs -lhello
