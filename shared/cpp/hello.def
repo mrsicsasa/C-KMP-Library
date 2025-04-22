@@ -1,4 +1,4 @@
 headers = hello.h
 headerFilter = hello.h
-compilerOpts = -I /path/to/your/header/files
-linkerOpts = -L /path/to/your/libs -lhello
+compilerOpts = -I/Users/sasamrsic/AndroidStudioProjects/Cexample/shared/cpp
+linkerOpts = -L/Users/sasamrsic/AndroidStudioProjects/Cexample/shared/cpp -lhello

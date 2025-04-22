@@ -25,10 +25,10 @@ kotlin {
             baseName = "shared"
             isStatic = true
         }
-        it.compilations{
-            val main by getting{
-                cinterops{
-                    create("hello"){
+        it.compilations {
+            val main by getting {
+                cinterops {
+                    create("hello") {
                         header(file("cpp/hello.h"))
                         defFile(file("cpp/hello.def"))
                         compilerOpts("-I/Users/sasamrsic/AndroidStudioProjects/Cexample/shared/cpp")
@@ -37,6 +37,7 @@ kotlin {
                 }
             }
         }
+
 
     }
     val compileHelloCpp by tasks.registering {
@@ -60,6 +61,7 @@ kotlin {
     tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinNativeLink>().configureEach {
         dependsOn(compileHelloCpp)
     }
+
     sourceSets {
         commonMain.dependencies {
             //put your multiplatform dependencies here
